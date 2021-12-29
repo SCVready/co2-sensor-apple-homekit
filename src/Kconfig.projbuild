@@ -1,0 +1,38 @@
+menu "Example Configuration"
+
+    config EXAMPLE_USE_HARDCODED_SETUP_CODE
+        bool "Use hard-coded setup code"
+        default y
+        help
+            HomeKit does not recommend having the setup code programmed in the accessory as is.
+            Instead, it expects setup info (salt-verifier pair) generated for the given setup code.
+            Use this option only for testing purposes. For production, the setup info should be
+            used.
+
+    config EXAMPLE_SETUP_CODE
+        string "HomeKit Setup Code"
+        default "111-22-333"
+        depends on EXAMPLE_USE_HARDCODED_SETUP_CODE
+        help
+            Setup code to be used for HomeKot pairing, if hard-coded setup code is enabled.
+
+    config EXAMPLE_SETUP_ID
+        string "HomeKit Setup Id"
+        default "ES32"
+        depends on EXAMPLE_USE_HARDCODED_SETUP_CODE
+        help
+            Setup id to be used for HomeKot pairing, if hard-coded setup code is enabled.
+
+    config MY_SCANNER_I2C_MASTER_NUM
+        int "MY_SCANNER_I2C_MASTER_NUM (0 = I2C_NUM_0 | 1 = I2C_NUM_1)"
+        default 0
+
+    config MY_SCANNER_I2C_SCLK_GPIO_NUM
+        int "MY_SCANNER_I2C_SCLK_GPIO_NUM (Huzzah32 #22 bottomleft)(Lolin32lite #13 bottomleft)"
+        default 22
+
+    config MY_SCANNER_I2C_SDA_GPIO_NUM
+        int "MY_SCANNER_I2C_SDA_GPIO_NUM (Huzzah32 #17 bottomleft-1)(Lolin32lite #15 bottomleft-1)"
+        default 21
+
+endmenu
