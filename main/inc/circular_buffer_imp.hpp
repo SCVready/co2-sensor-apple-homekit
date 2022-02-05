@@ -1,7 +1,3 @@
-/**
- * @author Alejandro Solozabal
- *
- */
 
 #include "circular_buffer.hpp"
 
@@ -47,7 +43,7 @@ template<typename Type, int Size> void CircularBuffer<Type, Size>::Insert(Type v
 template<typename Type, int Size> Type CircularBuffer<Type, Size>::Max()
 {
     const std::lock_guard<std::mutex> lock(m_access_mutex);
-    Type max_value;
+    Type max_value = 0;
     for(auto& value : m_data)
     {
         if(value > max_value)
@@ -61,7 +57,7 @@ template<typename Type, int Size> Type CircularBuffer<Type, Size>::Max()
 template<typename Type, int Size> Type CircularBuffer<Type, Size>::Min()
 {
     const std::lock_guard<std::mutex> lock(m_access_mutex);
-    Type min_value;
+    Type min_value = 0;
     for(auto& value : m_data)
     {
         if(value < min_value)
@@ -75,7 +71,7 @@ template<typename Type, int Size> Type CircularBuffer<Type, Size>::Min()
 template<typename Type, int Size> Type CircularBuffer<Type, Size>::Mean()
 {
     const std::lock_guard<std::mutex> lock(m_access_mutex);
-    Type sum;
+    Type sum = 0;
     for(auto& value : m_data)
     {
         sum += value;

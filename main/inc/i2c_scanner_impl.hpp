@@ -1,7 +1,3 @@
-/**
- * @author Alejandro Solozabal
- *
- */
 
 #include "driver/i2c.h"
 

@@ -1,7 +1,4 @@
-/**
- * @author Alejandro Solozabal
- *
- */
+
 
 #ifndef CO2_SENSOR_HPP_
 #define CO2_SENSOR_HPP_
@@ -21,10 +18,12 @@ struct Co2SensorConfig
     int a;
 };
 
+using Co2SensorCallback = std::function<void(float, float, float)>;
+
 class Co2Sensor : public I2cDevice 
 {
     public:
-        Co2Sensor(Co2SensorConfig config, std::function<void(float, float, float)> callback);
+        Co2Sensor(Co2SensorConfig config, Co2SensorCallback callback);
         ~Co2Sensor();
         int Start();
         int Stop();

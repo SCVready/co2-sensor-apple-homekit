@@ -1,7 +1,3 @@
-/**
- * @author Alejandro Solozabal
- *
- */
 
 #ifndef I2C_SCANNER_HPP_
 #define I2C_SCANNER_HPP_

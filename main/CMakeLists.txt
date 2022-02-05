@@ -1,0 +1,13 @@
+idf_component_register(
+    SRCS
+        src/app_main.cpp
+        src/co2_accessory.cpp
+        src/co2_sensor.cpp
+        src/i2c_device.cpp
+        src/i2c_scanner.cpp
+        src/homekit_device.cpp
+        src/homekit_service_co2_sensor.cpp
+        src/homekit_service_temp_sensor.cpp
+        src/homekit_service_humi_sensor.cpp
+    INCLUDE_DIRS
+        inc)

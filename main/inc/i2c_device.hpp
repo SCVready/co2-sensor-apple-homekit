@@ -1,7 +1,3 @@
-/**
- * @author Alejandro Solozabal
- *
- */
 
 #ifndef I2C_DEVICE_HPP_
 #define I2C_DEVICE_HPP_
@@ -25,9 +21,6 @@ class I2cDevice
     private:
         uint32_t m_address;
         I2cScanner& m_i2c_scanner;
-
-    protected:
-        ;
 };
 
 #include "i2c_device_impl.hpp"

@@ -1,15 +1,10 @@
-/**
- * @author Alejandro Solozabal
- *
- */
-
 #include "co2_sensor.hpp"
 
 #include <iostream>
 
 const char Co2Sensor::m_log_tag[] = {"Co2Sensor"};
 
-void vTaskCode(void* paramerter)
+static void vTaskCode(void* paramerter)
 {
     reinterpret_cast<Co2Sensor*>(paramerter)->ExecutionCycle();
 }

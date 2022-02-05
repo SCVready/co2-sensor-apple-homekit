@@ -1,7 +1,3 @@
-/**
- * @author Alejandro Solozabal
- *
- */
 
 #ifndef CIRCULAR_BUFFER_HPP_
 #define CIRCULAR_BUFFER_HPP_

@@ -35,4 +35,8 @@ menu "Example Configuration"
         int "MY_SCANNER_I2C_SDA_GPIO_NUM (Huzzah32 #17 bottomleft-1)(Lolin32lite #15 bottomleft-1)"
         default 21
 
+    config EXAMPLE_ALE
+        bool "ale"
+        default y
+
 endmenu
