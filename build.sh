@@ -1,4 +1,4 @@
 #!/bin/bash
 
-. ~/esp/esp-idf/export.sh
+. /root/esp/esp-idf/export.sh
 idf.py build
