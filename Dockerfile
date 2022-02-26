@@ -9,7 +9,4 @@ WORKDIR /root/esp
 RUN git clone -b v4.4 --recurse-submodules -j8 https://github.com/espressif/esp-idf.git
 RUN git clone -b master --recurse-submodules -j8 https://github.com/SCVready/esp-homekit-sdk
 
-WORKDIR /root/esp/esp-idf
-RUN ./install.sh esp32
-
 WORKDIR /root

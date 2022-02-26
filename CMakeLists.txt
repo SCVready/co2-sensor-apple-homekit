@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 if(DEFINED ENV{HOMEKIT_PATH})
   set(HOMEKIT_PATH $ENV{HOMEKIT_PATH})
 else()
-  set(HOMEKIT_PATH ~/esp/esp-homekit-sdk)
+  set(HOMEKIT_PATH /root/esp/esp-homekit-sdk)
 endif(DEFINED ENV{HOMEKIT_PATH})
 
 set(EXTRA_COMPONENT_DIRS ${HOMEKIT_PATH}/components ${HOMEKIT_PATH}/components/homekit ${HOMEKIT_PATH}/examples/common)
