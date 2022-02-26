@@ -1,6 +1,8 @@
 # co2-sensor-apple-homekit
 
-## WIP
+[![Build](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml/badge.svg)](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml)
+
+### WIP
 
 Apple homekit accessory to monitor CO2 levels.
 
