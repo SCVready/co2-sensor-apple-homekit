@@ -14,9 +14,9 @@ jobs:
       volumes:
         - ${{ github.workspace }}:/home/project
     steps:
-      - name: Checkout repository and submodules
+      - name: Checkout repository
         working-directory: /home/
-        uses: actions/checkout@v2
+        run: git clone https://github.com/SCVready/co2-sensor-apple-homekit
 
       - name: Checkout submodules
         working-directory: /home/co2-sensor-apple-homekit
