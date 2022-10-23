@@ -1,6 +1,6 @@
 # co2-sensor-apple-homekit
 
-[![Build](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml/badge.svg)](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml)
+[![Build](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml/badge.svg)](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml) (Issue on Github action)
 
 Apple homekit accessory to monitor true CO2 levels.
 
@@ -13,9 +13,9 @@ SCD30 VIN <-----> ESP32 3V3
 
 SCD30 GND <-----> ESP32 GND
 
-SCD30 SCL <-----> ESP32 GPIO22 (this can be configured in main/Kconfig.projbuild)
+SCD30 SCL <-----> ESP32 GPIO22 (this can be configured in sdkconfig with CONFIG_MY_SCANNER_I2C_SCLK_GPIO_NUM)
 
-SCD30 SDA <-----> ESP32 GPIO21 (this can be configured in main/Kconfig.projbuild)
+SCD30 SDA <-----> ESP32 GPIO21 (this can be configured in sdkconfig with CONFIG_MY_SCANNER_I2C_SDA_GPIO_NUM)
 
 ## Build and Run using docker
 1. Clone the repo
