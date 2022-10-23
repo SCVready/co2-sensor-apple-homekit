@@ -12,7 +12,7 @@ jobs:
     container:
       image: scvready/esphomekit:latest
       volumes:
-        - ${{ github.workspace }}:/home/project
+        - build_folder:/home/co2-sensor-apple-homekit
     steps:
       - name: Checkout repository
         working-directory: /home/
