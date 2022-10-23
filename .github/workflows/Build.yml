@@ -24,4 +24,8 @@ jobs:
 
       - name: Build
         working-directory: /home/co2-sensor-apple-homekit
+        run: ls
+
+      - name: Build
+        working-directory: /home/co2-sensor-apple-homekit
         run: ./docker_entry.sh /home /home/co2-sensor-apple-homekit
