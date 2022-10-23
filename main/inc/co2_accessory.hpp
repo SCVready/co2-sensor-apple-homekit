@@ -5,7 +5,7 @@
 #include <memory>
 
 #include "homekit_device.hpp"
-#include "co2_sensor.hpp"
+#include "i2c_co2_sensor.hpp"
 #include "circular_buffer.hpp"
 
 class Co2Accessory

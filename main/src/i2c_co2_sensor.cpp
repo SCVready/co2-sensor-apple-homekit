@@ -1,4 +1,4 @@
-#include "co2_sensor.hpp"
+#include "i2c_co2_sensor.hpp"
 
 #include <iostream>
 

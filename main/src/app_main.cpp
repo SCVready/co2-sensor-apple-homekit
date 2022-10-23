@@ -40,6 +40,8 @@ void app_main()
 {
     reset_key_init(RESET_GPIO);
 
+    esp_log_level_set("*", ESP_LOG_VERBOSE);
+
     Co2Accessory co2_accessory;
     co2_accessory.Start();
 

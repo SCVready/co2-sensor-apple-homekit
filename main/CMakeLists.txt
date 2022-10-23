@@ -2,7 +2,7 @@ idf_component_register(
     SRCS
         src/app_main.cpp
         src/co2_accessory.cpp
-        src/co2_sensor.cpp
+        src/i2c_co2_sensor.cpp
         src/i2c_device.cpp
         src/i2c_scanner.cpp
         src/homekit_device.cpp

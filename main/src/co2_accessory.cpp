@@ -121,14 +121,14 @@ void Co2Accessory::ExecutionCycle()
 
         if((pdTICKS_TO_MS(now - last_minute_tick)/1000) > 60)
         {
-            ESP_LOGI(m_log_tag, "New minute");
+            ESP_LOGD(m_log_tag, "New minute");
             last_minute_tick = now;
             m_last_hour_values.Insert(0);
         }
 
         if((pdTICKS_TO_MS(now - last_hour_tick)/1000) > 3600)
         {
-            ESP_LOGI(m_log_tag, "New Hour");
+            ESP_LOGD(m_log_tag, "New Hour");
             last_hour_tick = now;
             m_last_day_values.Insert(0);
         }
