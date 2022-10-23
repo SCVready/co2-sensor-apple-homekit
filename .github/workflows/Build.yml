@@ -10,8 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: scvready/esphomekit:latest
-    volumes:
-      - .:/home/project
+      volumes:
+        - .:/home/project
     steps:
       - name: Checkout repository and submodules
         uses: actions/checkout@v2
