@@ -10,10 +10,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container: scvready/esphomekit:latest
-
+    volumes:
+      - .:/home/project
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
       - name: Build
         working-directory: ${{github.workspace}}
-        run: ./build.sh
+        run: ./docker_entry.sh /home /home/project

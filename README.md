@@ -34,7 +34,7 @@ SCD30 SDA <-----> ESP32 GPIO21 (this can be configured in main/Kconfig.projbuild
 
 3. Build and run
 
-        docker run -it --mount type=bind,source="$(pwd)",target=/home/project --device=/dev/ttyUSB0 co2sensorapplehomekit_local:latest
+        docker run -it --mount type=bind,source="$(pwd)",target=/home/project --device=/dev/ttyUSB0 scvready/esphomekit:latest /home /home/project buildrun
 
     **If you have more than one USB connected to your PC, replace /dev/ttyUSB0 with the one that represents the ESP32,**
 
@@ -51,6 +51,8 @@ SCD30 SDA <-----> ESP32 GPIO21 (this can be configured in main/Kconfig.projbuild
     Congratulations!
 
     If not, you can open an issue here :) I'll try to help and improve documentation.
+
+    Exit the docker with `docker stop {container}`, ESP32 will keep running. And next time it's booted, it´'ll load the program as well.
 
 ## Pairing
 
