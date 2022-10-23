@@ -15,11 +15,13 @@ jobs:
         - ${{ github.workspace }}:/home/project
     steps:
       - name: Checkout repository and submodules
+        working-directory: /home/
         uses: actions/checkout@v2
 
       - name: Checkout submodules
+      working-directory: /home/co2-sensor-apple-homekit
         run: git submodule update --init --recursive
 
       - name: Build
-        working-directory: ${{github.workspace}}
-        run: ./docker_entry.sh /home /home/project
+        working-directory: /home/co2-sensor-apple-homekit
+        run: ./docker_entry.sh /home /home/co2-sensor-apple-homekit
