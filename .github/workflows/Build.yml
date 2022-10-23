@@ -9,7 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: scvready/esphomekit:latest
+    container:
+      image: scvready/esphomekit:latest
       volumes:
         - .:/home/project
     steps:
