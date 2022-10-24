@@ -1,6 +1,6 @@
 # co2-sensor-apple-homekit
 
-[![Build](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml/badge.svg)](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml) (Issue on Github action)
+[![Build](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml/badge.svg)](https://github.com/SCVready/co2-sensor-apple-homekit/actions/workflows/Build.yml)
 
 Apple homekit accessory to monitor true CO2 levels.
 
