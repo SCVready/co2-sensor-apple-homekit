@@ -9,23 +9,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: scvready/esphomekit:latest
-      volumes:
-        - build_folder:/home/co2-sensor-apple-homekit
     steps:
+      - name: Apt update
+        run: apt update
+
+      - name: Apt install esp-idf dependencies
+        run: apt install -y git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+
+      - name: Checkout esp-idf
+        run: git clone -b v4.4 --recurse-submodules -j8 https://github.com/espressif/esp-idf.git
+
+      - name: Install esp-idf
+        run: ./esp-idf/install.sh
+
       - name: Checkout repository
-        working-directory: /home/
-        run: git clone https://github.com/SCVready/co2-sensor-apple-homekit
-
-      - name: Checkout submodules
-        working-directory: /home/co2-sensor-apple-homekit
-        run: git submodule update --init --recursive
+        run: git clone --recurse-submodules https://github.com/SCVready/co2-sensor-apple-homekit
 
       - name: Build
-        working-directory: /home/co2-sensor-apple-homekit
-        run: ls
-
-      - name: Build
-        working-directory: /home/co2-sensor-apple-homekit
-        run: ./docker_entry.sh /home /home/co2-sensor-apple-homekit
+        working-directory: co2-sensor-apple-homekit
+        run: . ../esp-idf/export.sh; idf.py build
